@@ -10,6 +10,7 @@
     "bcrypt": "^5.1.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
+    "cookie-session": "^2.0.0",
     "debug": "~2.6.9",
     "dotenv": "^16.0.3",
     "easyinvoice": "^3.0.16",

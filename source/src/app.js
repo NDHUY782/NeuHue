@@ -7,7 +7,7 @@ var logger = require('morgan');
 var flash = require('connect-flash');
 const cookieParser = require('cookie-parser');
 const passport = require('passport')
-const session = require('express-session');
+const session = require('cookie-session');
 const moment = require('moment');
 
 

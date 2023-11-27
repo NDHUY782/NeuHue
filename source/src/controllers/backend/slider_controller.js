@@ -166,7 +166,7 @@ module.exports = {
 
         await SliderService.deleteItem({id})
 
-        fileHelpers.remove('src/public/uploads/sliders/', avatar)
+        fileHelpers.remove('public/uploads/sliders/', avatar)
         req.flash('warning', notify.DELETE_SUCCESS)           
         res.redirect(`${linkPrefix}`)
     },
@@ -203,7 +203,7 @@ module.exports = {
                         item.avatar = item.image_old;
                     } else {
                         item.avatar = req.files[0].filename;
-                        fileHelpers.remove('src/public/uploads/sliders/', item.image_old)
+                        fileHelpers.remove('public/uploads/sliders/', item.image_old)
                     }
                     await SliderService.editItem(item)
 
@@ -236,11 +236,11 @@ module.exports = {
             if(Array.isArray(id)){
                 for (let index = 0; index < id.length; index++) {
                     let {avatar}      = await SliderService.findAvatar({id: id[index]})
-                    fileHelpers.remove('src/public/uploads/sliders/', avatar)
+                    fileHelpers.remove('public/uploads/sliders/', avatar)
                 }
             } else {
                 let {avatar}          = await SliderService.findAvatar({id})
-                fileHelpers.remove('src/public/uploads/sliders/', avatar)
+                fileHelpers.remove('public/uploads/sliders/', avatar)
             }
             let {deletedCount}        = await SliderService.changeDeleteMultiple({id})
             req.flash('success', util.format(notify.DELETE_MULTI_SUCCESS, deletedCount))

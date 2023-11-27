@@ -8,7 +8,7 @@ const DashBoardService = require(`${__path_services}backend/dashboard_service`);
 module.exports = {
     getList: async (req , res , next) => {
  
-            fs.readFile('src/public/uploads/arrUser.txt', (err, data) => {
+            fs.readFile('public/uploads/arrUser.txt', (err, data) => {
                 arrUserInfor = JSON.parse(data);
             })
             let data = await DashBoardService.getList(req, res)

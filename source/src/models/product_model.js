@@ -13,16 +13,7 @@ const ProductModel = new Schema({
     ordering : {
         type : Number,
     },
-    quantity : {
-        type : Number,
-    },
     price : {
-        type : Number,
-    },
-    link : {
-        type : String,
-    },
-    discount : {
         type : Number,
     },
     content : {
@@ -37,9 +28,6 @@ const ProductModel = new Schema({
     id_category : {
         type : String,
     },
-    id_group_category : {
-        type : String,
-    }
 },{
     timestamps : true
 })

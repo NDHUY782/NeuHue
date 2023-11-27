@@ -9,7 +9,7 @@ module.exports = {
     getRss: async (req, res) => {
 
         let time = 1000*60
-        let data = fs.readFileSync('src/public/uploads/rss.txt')
+        let data = fs.readFileSync('public/uploads/rss.txt')
 
         let items = JSON.parse(data)
 
@@ -26,7 +26,7 @@ module.exports = {
                 items: newData,
             }
 
-            fs.writeFile('src/public/uploads/rss.txt', JSON.stringify(rss), err => {
+            fs.writeFile('public/uploads/rss.txt', JSON.stringify(rss), err => {
                 if (err) {
                   console.error(err);
                 }

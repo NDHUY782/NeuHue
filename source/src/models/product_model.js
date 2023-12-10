@@ -27,7 +27,7 @@ const ProductModel = new Schema({
     ],
     id_category : {
         type : String,
-    },
+    }
 },{
     timestamps : true
 })

@@ -9,13 +9,13 @@ router.use(async (req, res, next) => {
 });
 
 
-router.use('/' , require('./home'))
+// router.use('/' , require('./home'))
 
-router.use('/dang-nhap',require('./dang_nhap'))
-router.use('/dang-ky',require('./dang_ky'))
-router.use('/blog',require('./blog'))
-router.use('/product',require('./product'))
-router.use('/thanh-toan',require('./thanh_toan'))
+// router.use('/dang-nhap',require('./dang_nhap'))
+// router.use('/dang-ky',require('./dang_ky'))
+// router.use('/blog',require('./blog'))
+// router.use('/product',require('./product'))
+// router.use('/thanh-toan',require('./thanh_toan'))
 router.use('/' , require('./slug'))
 
 

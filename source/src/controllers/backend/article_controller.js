@@ -167,7 +167,7 @@ module.exports = {
 
         await ArticleService.deleteItem({id})
 
-        fileHelpers.remove('public/uploads/items/', avatar)
+        fileHelpers.remove('src/public/uploads/items/', avatar)
 
         req.flash('warning', notify.DELETE_SUCCESS)           
         res.redirect(`${linkPrefix}`)
@@ -205,7 +205,7 @@ module.exports = {
                         item.avatar = item.image_old;
                     } else {
                         item.avatar = req.files[0].filename;
-                        fileHelpers.remove('public/uploads/items/', item.image_old)
+                        fileHelpers.remove('src/public/uploads/items/', item.image_old)
                     }
                     await ArticleService.editItem(item)
 
@@ -238,11 +238,11 @@ module.exports = {
             if(Array.isArray(id)){
                 for (let index = 0; index < id.length; index++) {
                     let {avatar}      = await ArticleService.findAvatar({id: id[index]})
-                    fileHelpers.remove('public/uploads/items/', avatar)
+                    fileHelpers.remove('src/public/uploads/items/', avatar)
                 }
             } else {
                 let {avatar}          = await ArticleService.findAvatar({id})
-                fileHelpers.remove('public/uploads/items/', avatar)
+                fileHelpers.remove('src/public/uploads/items/', avatar)
             }
             let {deletedCount}        = await ArticleService.changeDeleteMultiple({id})
             req.flash('success', util.format(notify.DELETE_MULTI_SUCCESS, deletedCount))

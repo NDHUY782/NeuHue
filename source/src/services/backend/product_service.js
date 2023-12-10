@@ -11,7 +11,7 @@ module.exports = {
 
         let data = await ProductModel
             .find(obj.condition)
-            .select('name avatar status price arrCheck ordering id_category ')
+            .select('name avatar status price link quantity sale_price arrCheck ordering id_category ')
             .sort(obj.sort)
             .skip((obj.pagination.currentPage - 1) * obj.pagination.totalItemPerPage)
             .limit(obj.pagination.totalItemPerPage)
@@ -114,12 +114,12 @@ module.exports = {
             ordering: obj.ordering,
             quantity: obj.quantity,
             price: obj.price,
-            discount: obj.discount,
+            link: obj.link,
+            sale_price: obj.sale_price,
             content: obj.content,
             arrCheck: obj.arrCheck,
             avatar: obj.avatar,
             id_category: obj.category,
-            id_group_category: obj.group,
         });
 
         return {

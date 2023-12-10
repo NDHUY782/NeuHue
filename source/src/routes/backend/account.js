@@ -8,7 +8,7 @@ router
     .get(AccountController.getlist_json)
 
 router
-    .route('(/status/:status)?')
+    .route('/')
     .get(AccountController.getlist)
 
 router

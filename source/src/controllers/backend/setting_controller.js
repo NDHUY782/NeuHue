@@ -62,7 +62,7 @@ module.exports = {
                     item.logo = item.image_old;
                 } else {
                     item.logo = req.files[0].filename;
-                    fileHelpers.remove('public/uploads/logo/', item.image_old)
+                    fileHelpers.remove('src/public/uploads/logo/', item.image_old)
                 }
                 id = item.id;
 

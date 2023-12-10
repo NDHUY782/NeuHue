@@ -1,10 +1,10 @@
-const express = require('express')
+// const express = require('express')
 
-const router = express.Router()
-const RssController = require(`${__path_controllers}backend/rss_controller`)
+// const router = express.Router()
+// const RssController = require(`${__path_controllers}backend/rss_controller`)
  
-router
-    .route('/')
-    .get(RssController.getRss)  
+// router
+//     .route('/')
+//     .get(RssController.getRss)  
 
-module.exports = router;
+// module.exports = router;

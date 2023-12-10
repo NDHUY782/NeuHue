@@ -55,43 +55,6 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="category" class="col-sm-2 col-form-label text-sm-right">Group Category</label>
-                    <div class="col-xs-12 col-sm-8">
-                        <%- selectBoxDefaultHelper('group', groupItems, items.id_group_category) %>
-                        <span class="form-message" style = "color: red;"></span>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="Check" class="col-sm-2 col-form-label text-sm-right required">Lựa chọn:</label>
-                    <% if (items.id !== undefined && items.id !== '') { %>
-                        <div style="padding: 1%;">
-                            <input type="checkbox" id="vehicle1" name="arrCheck" value="show_home" <%=(items.arrCheck.includes('show_home')   ? 'checked="checked"' : '' ) %> >
-                            <label for="vehicle1"> Show_home </label><br>
-                        </div>
-                        <div style="padding: 1%;">
-                            <input type="checkbox" id="vehicle2" name="arrCheck" value="special" <%=(items.arrCheck.includes('special')   ? 'checked="checked"' : '' ) %> >
-                            <label for="vehicle2"> Special </label><br>
-                        </div>
-                        <div style="padding: 1%;">
-                            <input type="checkbox" id="vehicle3" name="arrCheck" value="discount" <%=(items.arrCheck.includes('discount')   ? 'checked="checked"' : '' ) %> >
-                            <label for="vehicle3"> Discount </label><br>
-                        </div>
-                    <% } else { %>
-                        <div style="padding: 1%;">
-                            <input type="checkbox" id="vehicle1" name="arrCheck" value="show_home" >
-                            <label for="vehicle1"> Show_home </label><br>
-                        </div>
-                        <div style="padding: 1%;">
-                            <input type="checkbox" id="vehicle2" name="arrCheck" value="special" >
-                            <label for="vehicle2"> Special </label><br>
-                        </div>
-                        <div style="padding: 1%;">
-                            <input type="checkbox" id="vehicle3" name="arrCheck" value="discount" >
-                            <label for="vehicle3"> Discount </label><br>
-                        </div>
-                    <% } %>
-                </div>
-                <div class="form-group row">
                     <label for="content_ck" class="col-sm-2 col-form-label text-sm-right required">Content</label>
                     <textarea name="content" rows="2" id="content"><%= items.content%></textarea>
                     <span class="form-message" style = "color: red;"></span>
